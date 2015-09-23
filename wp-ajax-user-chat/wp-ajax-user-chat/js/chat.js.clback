@@ -1,0 +1,39 @@
+ var jjjj = jQuery.noConflict();
+ jjjj(document).ready(function(){
+
+      var counter = 0;
+	  jjjj('').click(function(){
+	  		var uid = jjjj('').attr('id');
+	  });
+      
+	  var idList = new Array();
+
+      var broadcastMessageCallback = function(from, msg) {
+	  	//alert(from+' : '+msg);
+		submit_chat(from, msg, to);
+          for(var i = 0; i < idList.length; i ++) {
+              chatboxManager.addBox(idList[i]);
+              $("#" + idList[i]).chatbox("option", "boxManager").addMsg(from, msg);
+          }
+      }
+      // chatboxManager is excerpt from the original project
+      // the code is not very clean, I just want to reuse it to manage multiple chatboxes
+	  
+	  
+      chatboxManager.init({messageSent : broadcastMessageCallback});
+      jjjj("#link_add").click(function(event, ui) {
+          counter ++;
+          var id = "box" + counter;
+          idList.push(id);
+          chatboxManager.addBox(id, 
+                                  {dest:"dest" + counter, // not used in demo
+                                   title:"box" + counter,
+                                   first_name:"First" + counter,
+                                   last_name:"Last" + counter
+                                   //you can add your own options too
+                                  });
+          event.preventDefault();
+		  return false;
+      });
+	chat.init();
+});
