@@ -1,0 +1,20 @@
+/*
+ * Theme Name: first-try
+ *
+ * Layout: Sidebar-Content
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+/*.side-content {
+    background-image: url(../background_pic.jpg);
+}*/
+
+.content-area {
+    width: 100%;
+    padding: 5rem;
+}
+.entry-header,
+.widget-area,
+footer{
+    display: none;
+}
