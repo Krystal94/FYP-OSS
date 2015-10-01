@@ -1,0 +1,39 @@
+underscores.me
+github.com/automattic/_s
+codex.wordpress.org/Theme_Unit_Test
+users.tpg.com.au/j_birch/plugins/superfish
+
+
+wordpress.org/plugins/developer
+
+IDE:PHPstorm, eclipse, netbeans
+
+wordpress importer
+
+
+
+.content-area { //contain both content area and sidebar
+	float: left;
+	margin: 0 -25% 0 0; //shifted 25% to the right
+	width: 100%;
+}
+.site-main {
+	margin: 0 25% 0 0; //main content shifted 25% to the left
+}
+.site-content .widget-area {
+	float: right;
+	overflow: hidden;
+	width: 25%;
+}
+.site-footer {
+	clear: both;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
